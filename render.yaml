@@ -1,0 +1,41 @@
+# ======================================
+# Configuración para Render - Fullstack
+# Frontend + Backend en un solo servicio
+# ======================================
+
+services:
+  # Servicio Web - Frontend + Backend juntos
+  - type: web
+    name: retail-analytics-fullstack
+    env: node
+    region: oregon
+    plan: free
+    
+    # Comandos de build y start
+    buildCommand: npm install && npm run build
+    startCommand: npm start
+    
+    # Variables de entorno
+    envVars:
+      - key: NODE_ENV
+        value: production
+      
+      - key: PORT
+        value: 10000
+      
+      # MongoDB Atlas - Debes configurar tu connection string
+      - key: MONGODB_URI
+        sync: false  # Se configura manualmente en dashboard
+      
+      # JWT Secret - Se genera automáticamente
+      - key: JWT_SECRET
+        generateValue: true
+      
+      - key: JWT_EXPIRE
+        value: 7d
+    
+    # Health check para mantener el servicio activo
+    healthCheckPath: /health
+    
+    # Auto-deploy cuando hay push a main
+    autoDeploy: true
