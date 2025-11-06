@@ -44,7 +44,7 @@ const Layout = () => {
             <div className="flex items-center gap-2">
               <Store className="w-8 h-8 text-primary-600" />
               <div>
-                <h1 className="text-xl font-bold text-gray-900">Retail</h1>
+                <h1 className="text-xl font-bold text-gray-900">Kangris</h1>
                 <p className="text-xs text-gray-500">Analytics</p>
               </div>
             </div>

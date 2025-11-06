@@ -48,7 +48,7 @@ const Login = () => {
           <div className="flex items-center gap-3">
             <Store className="w-12 h-12" />
             <div>
-              <h1 className="text-4xl font-bold">Retail Analytics</h1>
+              <h1 className="text-4xl font-bold">Kangris Analytics</h1>
               <p className="text-blue-100">Sistema de Gestión Inteligente</p>
             </div>
           </div>
