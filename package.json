@@ -10,7 +10,7 @@
     "client": "cd frontend && npm run dev",
     "dev:all": "concurrently \"npm run server\" \"npm run client\"",
     "seed": "node backend/scripts/seedData.js",
-    "build": "cd frontend && npm install && npm run build",
+    "build": "npm --prefix frontend install && npm --prefix frontend run build",
     "start": "node backend/server.js"
   },
   "keywords": [
